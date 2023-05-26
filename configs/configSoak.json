@@ -1,0 +1,19 @@
+{
+  "tags": {
+    "name": "Soak Test"
+  },
+  "stages": [
+    {
+      "duration": "5m",
+      "target": 100
+    },
+    {
+      "duration": "8h",
+      "target": 100
+    },
+    {
+      "duration": "5m",
+      "target": 0
+    }
+  ]
+}

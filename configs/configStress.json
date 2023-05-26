@@ -1,0 +1,19 @@
+{
+  "tags": {
+    "name": "Stress Test"
+  },
+  "stages": [
+    {
+      "duration": "5m",
+      "target": 200
+    },
+    {
+      "duration": "30m",
+      "target": 200
+    },
+    {
+      "duration": "5m",
+      "target": 0
+    }
+  ]
+}

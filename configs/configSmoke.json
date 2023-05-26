@@ -1,0 +1,7 @@
+{
+  "tags": {
+    "name": "Smoke Test"
+  },
+  "vus": 2,
+  "duration": "10s"
+}

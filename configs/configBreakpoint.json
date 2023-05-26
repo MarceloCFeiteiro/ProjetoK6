@@ -1,0 +1,12 @@
+{
+  "tags": {
+    "name": "breakpoint Test"
+  },
+  "executor": "ramping-arrival-rate",
+  "stages": [
+    {
+      "duration": "2h",
+      "target": 2000
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tags": {
+    "name": "Load Test"
+  },
+  "stages": [
+    {
+      "duration": "20s",
+      "target": 40
+    },
+    {
+      "duration": "30s",
+      "target": 50
+    },
+    {
+      "duration": "20s",
+      "target": 0
+    }
+  ]
+}
