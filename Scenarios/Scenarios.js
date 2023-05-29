@@ -8,12 +8,12 @@ import { delDeleteProduct } from '../api/products/delProduct.js';
 import { postCreateCart } from '../api/cart/postCart.js';
 import { delDeleteCart } from '../api/cart/delCart.js';
 
-let token
+
 
 export function FlowCreateSearchUpdateDeleteUser() {
   let id
 
-  group('Create User', function () {
+  group('Create_User', function () {
     id = postCreateUser()
     getCreatedUser(id)
     putUpdateUser(id)
@@ -23,7 +23,7 @@ export function FlowCreateSearchUpdateDeleteUser() {
 
 export function FlowAuthCreateDeleteProduct(token) {
   let id
-  group('Create Product', function () {
+  group('Create_Product', function () {
     id = postCreateProduct(token)
     delDeleteProduct(token, id)
   })

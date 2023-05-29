@@ -1,0 +1,38 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  name: 'Build-Linux'
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: 'docker kill newrelic-statsd'
+
+- task: CmdLine@2
+  inputs:
+    script: 'docker rm newrelic-statsd'
+
+- task: CmdLine@2
+  inputs:
+    script: 'docker run -d --restart unless-stopped --name newrelic-statsd -h $(hostname) -e NR_ACCOUNT_ID=3498013 -e NR_API_KEY=9bb87dfae2489c74517f87da46464ab0FFFFNRAL -p 8125:8125/udp newrelic/nri-statsd:latest'
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+  displayName: 'npm install'
+  
+- task: k6-load-test@0
+  inputs:
+    filename: 'main.js'
+    args: '--config ./configs/configLoad.json'
+  displayName: 'Execute K6'
