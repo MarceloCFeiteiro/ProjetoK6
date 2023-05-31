@@ -31,8 +31,8 @@ export default function (token) {
   FlowAuthCreateCancelCart(token)
 }
 
-// export function handleSummary(data) {
-//   return {
-//     "./report/report.html": htmlReport(data)
-//   }
-// }
+export function handleSummary(data) {
+  return {
+    "./report/report.html": htmlReport(data)
+  }
+}
