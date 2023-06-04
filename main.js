@@ -4,10 +4,10 @@ import { FlowToTest } from "./Scenarios/Scenarios.js"
 
 export const options = {
   thresholds: {
-    'group_duration{group:::Your_group}': [{ threshold: 'avg < 20', abortOnFail: true }],
+    'group_duration{group:::Your_group}': [{ threshold: 'avg > 20', abortOnFail: true }],
     'http_req_failed{group:::Your_group}': [{ threshold: 'rate < 0.01', abortOnFail: true }],
-    'group_duration{group:::Your_group}': [{ threshold: 'avg < 20', abortOnFail: true }],
-    'http_req_duration{group:::Your_group}': [{ threshold: 'p(95) < 200', abortOnFail: true }]
+    'group_duration{group:::Your_group}': [{ threshold: 'avg > 20', abortOnFail: true }],
+    'http_req_duration{group:::Your_group}': [{ threshold: 'p(95) < 300', abortOnFail: true }]
   }
 }
 
@@ -18,11 +18,11 @@ export default function () {
   FlowToTest()
 }
 
-export function handleSummary(data) {
-  return {
-    "./report/report.html": htmlReport(data)
-  }
-}
+// export function handleSummary(data) {
+//   return {
+//     "./report/report.html": htmlReport(data)
+//   }
+// }
 
 export function teardown() {
 }

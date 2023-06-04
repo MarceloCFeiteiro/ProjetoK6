@@ -10,9 +10,9 @@ let headers = {
 
 export function yourCalledMethod() {
 
-  const resp = http.post(`${baseUrl}`, body, { headers: headers })
+  const resp = http.get(`${baseUrl}`, body, { headers: headers })
 
-  check(resp, { 'Status code is 201': (r) => r.status == 201 })
+  check(resp, { 'Status code is 200': (r) => r.status == 200 })
 
   sleep(UserWait())
 

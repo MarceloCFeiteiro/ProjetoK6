@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "k6": "^0.0.0",
     "node-fetch": "^3.3.1",
     "uuid": "^9.0.0"
   }
