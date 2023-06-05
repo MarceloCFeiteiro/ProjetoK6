@@ -1,7 +1,6 @@
 # Projeto de Teste de Carga com k6
 Este repositório demonstra como criar um projeto de teste de carga utilizando o k6, uma ferramenta popular de teste de carga de código aberto. O projeto inclui instruções passo a passo e código de exemplo para ajudar você a começar com testes de carga.
 
-
 ## Instalação do Node.js
 Este guia fornece instruções passo a passo para instalar o Node.js em seu sistema.
 
@@ -35,12 +34,13 @@ Siga estes passos para configurar e executar seu projeto de teste de carga:
 2. Crie uma pasta para seu projeto.
 3. Clonar o repositório na pasta criada no passo 1.
 4. Execute o comando: npm i
-5. Execute o comando: npx k6 run main.js 
+5. Execute o comando: k6 run main.js 
+6. Verificar se no console do vs code, aparecerão as estátiscas de execução do k6 
 
-
-# Licença
+# Licença 
 Este projeto está licenciado sob a Licença MIT.
 Este README foi construido com o auxilio do Chat GPT.
+Para mais informações consulte a [documentação do k6.](https://k6.io/docs/)
 
     
 
